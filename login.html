@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        h1{
+            font-size: 5rem;
+            font-family: Bricolage Grotesque;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #080a45;
+            margin-top:-15%;
+            transition: 0.5s;
+        }
+        .h1-change{
+            color:#F1DDD9;
+            transition: 0.5s;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        span{
+            font-family: Bricolage Grotesque;
+            font-weight: 300;
+            line-height: 150%;
+            color: #080a45;
+        }
+        .span-change{
+            color:#F1DDD9;
+            transition: 0.5s;
+        }
+        a{
+            text-decoration: none;
+            margin-left: 1rem;
+            color: black;
+            transition: 0.5s;
+        }
+        .a-change{
+            color:#F1DDD9;
+            transition: 0.5s;
+        }
+        button{
+            background-color: #080a45;
+            color: white;
+            height: 2rem;
+            width: 100px;
+            border: none;
+            border-radius: 15px;
+            transition: 0.5s;
+        }
+        .button-change{
+            background-color: #F1DDD9;
+            color: #080a45;
+            margin-bottom: -15%;
+            transition: 0.5s;
+        }
+        .form{
+            width: 40%;
+            border:  3px #080a45 solid;
+            padding: 150px 0px;
+        }
+        .form-change{
+            background-color:#080a45;
+        }
+        .form:hover{
+            box-shadow: 10px 10px #F1DDD9;
+        }
+        input{
+            height: 40px;
+            width: 60%;
+            border-radius: 15px;
+        }
+        @media (max-width: 700px){
+            h1{
+                font-size: 3em;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <div class="form" data-aos="zoom-in" data-aos-duration="1000">
+            <form id="login" style="text-align: center; display: block;">
+                <h1>Vit Student Trust</h2>
+                <input type="email" placeholder="Email" required><br><br>
+                <input type="text" placeholder="Password" required><br><br>
+                <span>Don't have an account ?<a href="./register.html">Register</a></span><br><br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.querySelector(".form").addEventListener("mouseover",animation);
+        document.querySelector(".form").addEventListener("mouseout",animation);
+
+        function animation(){
+            document.querySelector("h1").classList.toggle("h1-change");
+            document.querySelector(".form").classList.toggle("form-change");
+            document.querySelector("button").classList.toggle("button-change");
+            document.querySelector("a").classList.toggle("a-change");
+            document.querySelector("span").classList.toggle("span-change");
+        }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>
